@@ -10,3 +10,13 @@ class Request:
                 return Response(status=status.HTTP_400_BAD_REQUEST)
 
         return wrapper
+
+    @staticmethod
+    def get(func):
+        def wrapper(request, message_id, access_token, *args, **kwargs):
+            if request.method == 'GET':
+                return func(request, message_id, access_token, *args, **kwargs)
+            else:
+                return Response(status=status.HTTP_400_BAD_REQUEST)
+
+        return wrapper
