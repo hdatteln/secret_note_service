@@ -25,7 +25,8 @@ SECRET_KEY = '8$d&4x_jm$g82^t7!s59$8h-li!q*3+fx%admped$-qmx_zf5='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+DJANGO_SERVER_URL = 'http://127.0.0.1:8000/'
 
 
 # Application definition
